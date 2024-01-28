@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ToDoListWithAuth
+
+## Overview
+
+ToDoListWithAuth is a web application built using Next.js 14, featuring user authentication powered by Clerk, database management using PostgreSQL, and ORM functionality implemented with Prisma. This application allows users to create, update, and delete tasks while ensuring secure authentication through Clerk and efficient data handling with Prisma and PostgreSQL.
+
+## Features
+
+- User Authentication with Clerk
+- Task Management (Create, Read, Update, Delete)
+- PostgreSQL for Database Storage
+- Prisma as the ORM (Object-Relational Mapping) solution
+- Built with Next.js 14
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+Make sure you have the following installed:
+
+- Node.js (https://nodejs.org/)
+- npm (Node Package Manager)
+- PostgreSQL Database
+- Clerk Account (https://clerk.dev/)
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/azalmonawwar/todolistwithauth.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd todolistwithauth
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Set up your environment variables:
+
+   Create a `.env.local` file in the root of the project and add the following:
+
+   ```env
+    NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=yourkey
+    CLERK_SECRET_KEY=yourkey
+    NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+    NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+    NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
+    NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
+    DATABASE_URL=yourdburl
+   ```
+
+   Replace `your-clerk-frontend-api-key` with your Clerk frontend API key and `your-postgresql-database-url` with your PostgreSQL database URL.
+
+### Run the Application
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Technologies Used
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- [Next.js](https://nextjs.org/)
+- [Clerk](https://clerk.dev/)
+- [PostgreSQL](https://www.postgresql.org/)
+- [Prisma](https://www.prisma.io/)
 
-## Learn More
+## Contributing
 
-To learn more about Next.js, take a look at the following resources:
+Contributions are welcome! Feel free to open issues or submit pull requests.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+This project is licensed under the [MIT License](LICENSE).
 
-## Deploy on Vercel
+## Acknowledgments
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Clerk Documentation](https://docs.clerk.dev/)
+- [Prisma Documentation](https://www.prisma.io/docs/)
+- [PostgreSQL Documentation](https://www.postgresql.org/docs/)
