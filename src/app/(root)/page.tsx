@@ -1,3 +1,5 @@
+import  { TodoForm } from "@/components/forms/create-todo";
+import Todos from "@/components/shared/Todos";
 import { createTodo, getTodo } from "@/lib/utils/create-todo";
 import { initialUser } from "@/lib/utils/intial-user";
 import { UserButton } from "@clerk/nextjs";
@@ -5,12 +7,11 @@ import { UserButton } from "@clerk/nextjs";
 
 
 export default async function Home() {
-  // const profile = await initialUser();
-  // const todos = await getTodo(profile?.userId )
-  console.log(todos)
   return (
-    <div className="h-screen">
-      <UserButton afterSignOutUrl="/"/>
-    </div>
+    <section className="py-10 md:py-20 w-[90%] md:w-[60%]  mx-auto"> 
+      
+      <Todos/>
+
+    </section>
   )
 }
