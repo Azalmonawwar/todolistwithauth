@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
+    <ClerkProvider >
       <html lang="en">
         <body className={inter.className}>
           <main className="h-screen flex items-center justify-center"> 
